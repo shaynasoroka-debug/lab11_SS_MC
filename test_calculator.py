@@ -26,9 +26,9 @@ class TestCalculator(unittest.TestCase):
 
     def test_divide(self): # 3 assertions
         with self.assertRaises(ZeroDivisionError):
-            div(10, 0)
-        self.assertEqual(div(10, 2), 5)
-        self.assertEqual(div(-9, 3), -3)
+            div(0, 10)
+        self.assertEqual(div(2, 10), 5)
+        self.assertEqual(div(3, -9), -3)
 
     ######## Partner 2
     def test_divide_by_zero(self): # 1 assertion
@@ -42,12 +42,12 @@ class TestCalculator(unittest.TestCase):
 
     def test_log_invalid_base(self): # 1 assertion
         with self.assertRaises(ValueError):
-            logarithm(10, 1)
+            logarithm(10, 0)
     
 
     def test_log_invalid_argument(self): # 1 assertion
         with self.assertRaises(ValueError):
-            logarithm(0, 5)
+            logarithm(5, 0)
 
     def test_hypotenuse(self): # 3 assertions
         with self.assertRaises(ValueError):
@@ -59,7 +59,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(square_root(16), 4.0)
         with self.assertRaises(ValueError):
             square_root(-9)
-        self.assertAlmostEqual(square_root(2), 1.4142)
+        self.assertAlmostEqual(square_root(2), 1.4142135623730951)
 # Do not touch this
 if __name__ == "__main__":
     unittest.main()
