@@ -1,3 +1,7 @@
+# https://github.com/shaynasoroka-debug/lab11_SS_MC.git
+# Partner 1: Shayna Soroka
+# Partner 2: Maya Crecos
+
 import unittest
 from calculator import *
 

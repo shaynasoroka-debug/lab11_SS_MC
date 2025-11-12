@@ -1,11 +1,7 @@
-"""
-calculator.py
-- Defines functions used to create a simple calculator
+# https://github.com/shaynasoroka-debug/lab11_SS_MC.git
+# Partner 1: Shayna Soroka
+# Partner 2: Maya Crecos
 
-One function per operation, in order.
-"""
-# First example
-# hello
 import math
 def add(a, b):
     return a + b
