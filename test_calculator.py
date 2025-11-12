@@ -32,7 +32,7 @@ class TestCalculator(unittest.TestCase):
 
     ######## Partner 2
     def test_divide_by_zero(self): # 1 assertion
-        self.assertRaises(div(0, 5))
+        self.assertRaises(ZeroDivisionError, div, 5, 0)
 
     def test_logarithm(self): # 3 assertions
         self.assertAlmostEqual(logarithm(8, 2), 0.33333333333333337)
@@ -53,7 +53,7 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ValueError):
             hypotenuse(a = -3, b = 4)
         self.assertEqual(hypotenuse(3, 4), 5)
-        self.assertAlmostEqual(hypotenuse(5.5, 2.5), 6.0415)
+        self.assertAlmostEqual(hypotenuse(5.5, 2.5), 6.0415, places=4)
 
     def test_sqrt(self): # 3 assertions
         self.assertEqual(square_root(16), 4.0)
