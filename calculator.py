@@ -1,15 +1,11 @@
-"""
-calculator.py
-- Defines functions used to create a simple calculator
+# https://github.com/shaynasoroka-debug/lab11_SS_MC.git
+# Partner 1: Shayna Soroka
+# Partner 2: Maya Crecos
 
-One function per operation, in order.
-"""
-# First example
-# hello
 import math
 def add(a, b):
     return a + b
-def sub(a, b):
+def subtract(a, b):
     return a - b
 def mul(a, b):
     return a * b
@@ -19,7 +15,7 @@ def div(a, b):
         return quotient
     except ZeroDivisionError:
         print("ZeroDivisionError")
-def log(a, b):
+def logarithm(a, b):
     try:
         log = math.log(b,a)
     except ValueError:
