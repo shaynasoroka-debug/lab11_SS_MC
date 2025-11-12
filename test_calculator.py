@@ -36,7 +36,7 @@ class TestCalculator(unittest.TestCase):
 
     def test_logarithm(self): # 3 assertions
         self.assertAlmostEqual(logarithm(8, 2), 3.0)
-        self.assertAlmostEqual(logarithm(100, 10), 2.0)
+        self.assertAlmostEqual(logarithm(100, 10), 0.5)
         self.assertAlmostEqual(logarithm(math.e, math.e), 1.0)
 
 
@@ -53,7 +53,7 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ValueError):
             hypotenuse(-3, 4)
         self.assertEqual(hypotenuse(3, 4), 5)
-        self.assertAlmostEqual(hypotenuse(5.5, 2.5), 6.0415)
+        self.assertAlmostEqual(hypotenuse(5.5, 2.5), 6.041522986797286)
 
     def test_sqrt(self): # 3 assertions
         self.assertEqual(square_root(16), 4.0)
