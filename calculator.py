@@ -10,23 +10,22 @@ def subtract(a, b):
 def mul(a, b):
     return a * b
 def div(a, b):
-    try:
-        quotient = b / a
-        return quotient
-    except ZeroDivisionError:
-        print("ZeroDivisionError")
+    if a == 0:
+        raise ZeroDivisionError
+    else:
+        return b / a
 def logarithm(a, b):
-    try:
-        log = math.log(b,a)
-    except ValueError:
-        print("ValueError")
+    if b == 0:
+        raise ValueError
+    else:
+        return math.log(b, a)
 def exp(a, b):
-    a ** b
+    return a ** b
 def square_root(a):
-    try:
+    if a < 0:
+        raise ValueError
+    else:
         return math.sqrt(a)
-    except ValueError:
-        print("ValueError")
 def hypotenuse(a, b):
     return math.hypot(a, b)
 
